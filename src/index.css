@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+/* Apply to all elements */
+
+@font-face {
+  font-family: "balo";
+  src: url(./assets/baloo.ttf);
+}
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  color: #ffb11f;
+}
+
+.animated-underline {
+  position: relative;
+}
+
+.animated-underline::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 3px; /* Underline thickness */
+  left: 0;
+  bottom: -3px; /* Adjust this value to control distance */
+
+  background-color: #ffb11f; /* Underline color, match your orange color */
+  transition: width 0.3s ease-in-out; /* Animation duration and easing */
+}
+
+.animated-underline:hover::after {
+  width: 100%;
+}
