@@ -6,6 +6,7 @@ import Lenis from '@studio-freight/lenis'
 import Skills from './Components/Skills'
 import Aboutme from './Components/Aboutme'
 import Footer from './Components/footer'
+import { Analytics } from "@vercel/analytics/next"
 
 const App = () => {
   useEffect(() => {
@@ -37,6 +38,7 @@ const App = () => {
      <Skills/>
      <Aboutme/>
      <Footer/>
+     <Analytics/>
     </div>
 
   )
