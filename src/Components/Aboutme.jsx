@@ -49,7 +49,7 @@ const Aboutme = () => {
                 setMsg('An unexpected error occurred.');
             }
         }
-       
+       console.log(response)
         
     }
 
