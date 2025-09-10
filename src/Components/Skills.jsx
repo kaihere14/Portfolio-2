@@ -12,14 +12,14 @@ const Skills = () => {
       </div>
 
       <div className="frontend  w-full mt-20 flex flex-col items-center gap-10">
-        <h1 className='text-6xl font-["balo"] font-semibold underline '>Frontend Development</h1>
+        <h1 className='text-6xl font-["balo"] font-semibold underline '>Frontend Devlopment</h1>
         <div className="blocks flex flex-wrap justify-center gap-20">
           <Frontskill/>
         </div>
       </div>
 
       <div className="backend   w-full mt-20 flex flex-col items-center gap-10">
-        <h1 className='text-6xl font-["balo"] font-semibold underline '>Backend Development</h1>
+        <h1 className='text-6xl font-["balo"] font-semibold underline '>Backend Devlopment</h1>
         <div className="blocks flex flex-wrap justify-center gap-20">
           <Backskill/>
         </div>
