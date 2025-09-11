@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const Cards = () => {
   return ([
-    <motion.div key="card-1" className='w-[35vw] bg-white border-3 flex flex-col shadow-lg shadow-gray-800' whileHover={{ y: -5, boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.05)" }} transition={{ type: "tween", duration: 0.2 }}>
+    <motion.div key="card-1" className='w-[70vw] lg:w-[35vw] bg-white border-3 flex flex-col shadow-lg shadow-gray-800' whileHover={{ y: -5, boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.05)" }} transition={{ type: "tween", duration: 0.2 }}>
         <div className="first flex border-b-3 items-center p-1 bg-[#c4c4c4]">
             <div className='flex gap-2 px-2'>
                 <div className='w-3 h-3 border-2 rounded-full bg-white'></div>
@@ -28,7 +28,7 @@ const Cards = () => {
     </motion.div>,
 
     
-    <motion.div key="card-2" className='w-[35vw] bg-white border-3 flex flex-col shadow-lg shadow-gray-800' whileHover={{ y: -5, boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.05)" }} transition={{ type: "tween", duration: 0.2 }}>
+    <motion.div key="card-1" className='w-[70vw] lg:w-[35vw] bg-white border-3 flex flex-col shadow-lg shadow-gray-800' whileHover={{ y: -5, boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.05)" }} transition={{ type: "tween", duration: 0.2 }}>
     <div className="first flex border-b-3 items-center p-1 bg-[#c4c4c4]">
         <div className='flex gap-2 px-2'>
             <div className='w-3 h-3 border-2 rounded-full bg-white'></div>
@@ -51,7 +51,9 @@ const Cards = () => {
         </div>
     </div>
     </motion.div>,
-    <motion.div key="card-3" className='w-[35vw] bg-white border-3 flex flex-col shadow-lg shadow-gray-800' whileHover={{ y: -5, boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.05)" }} transition={{ type: "tween", duration: 0.2 }}>
+
+    
+    <motion.div key="card-3" className='w-[70vw] lg:w-[35vw] bg-white border-3 flex flex-col shadow-lg shadow-gray-800' whileHover={{ y: -5, boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.05)" }} transition={{ type: "tween", duration: 0.2 }}>
     <div className="first flex border-b-3 items-center p-1 bg-[#c4c4c4]">
         <div className='flex gap-2 px-2'>
             <div className='w-3 h-3 border-2 rounded-full bg-white'></div>
@@ -74,7 +76,7 @@ const Cards = () => {
         </div>
     </div>
     </motion.div>,
-    <motion.div key="card-4" className='w-[35vw] bg-white border-3 flex flex-col shadow-lg shadow-gray-800' whileHover={{ y: -5, boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.05)" }} transition={{ type: "tween", duration: 0.2 }}>
+    <motion.div key="card-4" className='w-[70vw] lg:w-[35vw] bg-white border-3 flex flex-col shadow-lg shadow-gray-800' whileHover={{ y: -5, boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.05)" }} transition={{ type: "tween", duration: 0.2 }}>
     <div className="first flex border-b-3 items-center p-1 bg-[#c4c4c4]">
         <div className='flex gap-2 px-2'>
             <div className='w-3 h-3 border-2 rounded-full bg-white'></div>
@@ -97,7 +99,7 @@ const Cards = () => {
         </div>
     </div>
     </motion.div>,
-    <motion.div key="card-5" className='w-[35vw] bg-white border-3 flex flex-col shadow-lg shadow-gray-800' whileHover={{ y: -5, boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.05)" }} transition={{ type: "tween", duration: 0.2 }}>
+    <motion.div key="card-5" className='w-[70vw] lg:w-[35vw] bg-white border-3 flex flex-col shadow-lg shadow-gray-800' whileHover={{ y: -5, boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.05)" }} transition={{ type: "tween", duration: 0.2 }}>
     <div className="first flex border-b-3 items-center p-1 bg-[#c4c4c4]">
         <div className='flex gap-2 px-2'>
             <div className='w-3 h-3 border-2 rounded-full bg-white'></div>
@@ -120,7 +122,7 @@ const Cards = () => {
         </div>
     </div>
     </motion.div>,
-    <motion.div key="card-6" className='w-[35vw] bg-white border-3 flex flex-col shadow-lg shadow-gray-800' whileHover={{ y: -5, boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.05)" }} transition={{ type: "tween", duration: 0.2 }}>
+    <motion.div key="card-6" className='w-[70vw] lg:w-[35vw] bg-white border-3 flex flex-col shadow-lg shadow-gray-800' whileHover={{ y: -5, boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.05)" }} transition={{ type: "tween", duration: 0.2 }}>
     <div className="first flex border-b-3 items-center p-1 bg-[#c4c4c4]">
         <div className='flex gap-2 px-2'>
             <div className='w-3 h-3 border-2 rounded-full bg-white'></div>
@@ -143,7 +145,7 @@ const Cards = () => {
         </div>
     </div>
     </motion.div>,
-    <motion.div key="card-7" className='w-[35vw] bg-white border-3 flex flex-col shadow-lg shadow-gray-800' whileHover={{ y: -5, boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.05)" }} transition={{ type: "tween", duration: 0.2 }}>
+    <motion.div key="card-7" className='w-[70vw] lg:w-[35vw] bg-white border-3 flex flex-col shadow-lg shadow-gray-800' whileHover={{ y: -5, boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.05)" }} transition={{ type: "tween", duration: 0.2 }}>
     <div className="first flex border-b-3 items-center p-1 bg-[#c4c4c4]">
         <div className='flex gap-2 px-2'>
             <div className='w-3 h-3 border-2 rounded-full bg-white'></div>
