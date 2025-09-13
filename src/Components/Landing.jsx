@@ -58,7 +58,7 @@ const Landing = () => {
             <a key={idx} href={link.href} target="_blank" rel="noopener noreferrer">
               <button className="flex items-center justify-center gap-2 px-5 py-2 border-3 bg-[#c4c4c4] font-['balo'] font-semibold text-base sm:text-lg cursor-pointer transition-all duration-200 ease-in hover:bg-[#ffa600] hover:scale-105 rounded-lg w-[140px] sm:w-[160px]">
                 {link.label}
-                <TiArrowDownThick className="rotate-[220deg]" />
+                <TiArrowDownThick className="rotate-[220deg] flex-shrink-0" />
               </button>
             </a>
           ))}
