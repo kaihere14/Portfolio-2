@@ -8,7 +8,7 @@ const Skills = () => {
 
       <div className="texts w-full ml-5 lg:ml-15 ">
         <h1 className='text-6xl lg:text-9xl  font-["balo"] font-bold'>My <span className='text-orange-400 underline'>Skills.</span></h1>
-        <p className='w-full lg:w-1/3 pt-5 font-semibold text-lg text-gray-600 '>The technologies and tools I use to craft clean, modern and responsive digital experiences.</p>
+        <p className='w-full lg:w-1/3 pt-5 sm:px-5 font-semibold text-lg text-gray-600 '>The technologies and tools I use to craft clean, modern and responsive digital experiences.</p>
       </div>
 
       <div className="frontend  w-full mt-20 flex flex-col items-center gap-10">
