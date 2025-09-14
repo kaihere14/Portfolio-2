@@ -85,7 +85,7 @@ const loadingBar = () => {
       draggable: true,
     });
         setStatusMsg("✅ Message Sent Successfully");
-        load()
+
         setFname("");
         setLname("");
         setEmail("");
