@@ -56,6 +56,14 @@ const loadingBar = () => {
       email,
       msg: message,
     };
+
+     const toastId = toast.loading("Sending message...", {
+    position: "bottom-center",
+    closeOnClick: false,
+    pauseOnHover: false,
+    draggable: false,
+  });
+
     try {
       const response = await axios.post(
         "https://portfolio-backend-gray.vercel.app/contact",
@@ -68,6 +76,14 @@ const loadingBar = () => {
       );
 
       if (response.status === 200) {
+        toast.update(toastId, {
+      render: "✅ Message sent successfully!",
+      type: "success",
+      isLoading: false,
+      autoClose: 3000,
+      closeOnClick: true,
+      draggable: true,
+    });
         setStatusMsg("✅ Message Sent Successfully");
         load()
         setFname("");
@@ -77,16 +93,24 @@ const loadingBar = () => {
       }
     } catch (error) {
       console.error("Frontend error:", error);
+      toast.update(toastId, {
+      render: "❌ Failed to send message!",
+      type: "error",
+      isLoading: false,
+      autoClose: 3000,
+      closeOnClick: true,
+      draggable: true,
+    });
       if (error.response) {
-        fail()
+      
         setStatusMsg(error.response.data.error || "❌ Message failed to send");
         
       } else if (error.request) {
-        fail()
+       
         setStatusMsg("⚠️ No response from server. Please try again later.");
         
       } else {
-        fail()
+        
         setStatusMsg("❌ An unexpected error occurred.");
       }
     }
@@ -134,10 +158,7 @@ const loadingBar = () => {
           <div className="second flex justify-center p-6">
             <form
               className="font-['balo'] w-full flex flex-col gap-6"
-              onSubmit={(e)=>{
-                handleSubmit(e),
-                loadingBar()
-              }}
+              onSubmit={handleSubmit}
               
             >
               <div className="flex flex-col md:flex-row gap-6">
