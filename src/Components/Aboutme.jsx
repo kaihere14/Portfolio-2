@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import axios from "axios";
 import doodle from "../assets/doodle.png";
+import { ToastContainer, toast } from 'react-toastify';
 
 const Aboutme = () => {
   const [fname, setFname] = useState("");
@@ -9,6 +10,43 @@ const Aboutme = () => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState(""); // <-- message input
   const [statusMsg, setStatusMsg] = useState(""); // <-- success/error message
+
+  const load = () =>toast.success('✅ Message send succesfully!', {
+position: "top-right",
+autoClose: 5000,
+hideProgressBar: false,
+closeOnClick: false,
+pauseOnHover: false,
+draggable: true,
+progress: undefined,
+theme: "light",
+});
+
+const fail = ()=>toast.error('❌ Failed to send message!', {
+position: "bottom-center",
+autoClose: 5000,
+hideProgressBar: false,
+closeOnClick: false,
+pauseOnHover: false,
+draggable: true,
+progress: undefined,
+theme: "light",
+});
+
+const loadingBar = () => {
+  toast('sending message...', {
+    position: "bottom-center",
+    autoClose: 5000,
+    closeOnClick: false,
+    pauseOnHover: false,
+    draggable: false,
+    progress: undefined, // will animate
+    hideProgressBar: false, 
+    closeButton: false,
+    className: "bg-transparent shadow-none", // remove bg
+    bodyClassName: "hidden", // hide text
+  });
+};
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -19,6 +57,7 @@ const Aboutme = () => {
       msg: message,
     };
 
+    loadingBar()
     try {
       const response = await axios.post(
         "https://portfolio-backend-gray.vercel.app/contact",
@@ -32,6 +71,7 @@ const Aboutme = () => {
 
       if (response.status === 200) {
         setStatusMsg("✅ Message Sent Successfully");
+        load()
         setFname("");
         setLname("");
         setEmail("");
@@ -40,10 +80,15 @@ const Aboutme = () => {
     } catch (error) {
       console.error("Frontend error:", error);
       if (error.response) {
+        fail()
         setStatusMsg(error.response.data.error || "❌ Message failed to send");
+        
       } else if (error.request) {
+        fail()
         setStatusMsg("⚠️ No response from server. Please try again later.");
+        
       } else {
+        fail()
         setStatusMsg("❌ An unexpected error occurred.");
       }
     }
@@ -137,7 +182,9 @@ const Aboutme = () => {
               {statusMsg && (
                 <p className="text-center text-sm md:text-base mt-2">
                   {statusMsg}
-                </p>
+                  
+                </p>,
+                <ToastContainer/>
               )}
 
               <div className="flex justify-center">
@@ -147,6 +194,7 @@ const Aboutme = () => {
                 >
                   Submit
                 </button>
+    
               </div>
             </form>
           </div>
