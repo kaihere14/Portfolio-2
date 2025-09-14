@@ -14,14 +14,10 @@ const Aboutme = () => {
 
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    const data = {
-      fname,
-      lname,
-      email,
-      msg: message,
-    };
+  e.preventDefault();
+  const data = { fname, lname, email, msg: message };
 
+  // Always trigger loading immediately
   const toastId = toast.loading("Sending message...", {
     position: "bottom-center",
     closeOnClick: false,
@@ -29,36 +25,32 @@ const Aboutme = () => {
     draggable: false,
   });
 
-    try {
-      const response = await axios.post(
-        "https://portfolio-backend-gray.vercel.app/contact",
-        data,
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      );
+  try {
+    const response = await axios.post(
+      "https://portfolio-backend-gray.vercel.app/contact",
+      data,
+      { headers: { "Content-Type": "application/json" } }
+    );
 
-      if (response.status === 200) {
+    if (response.status === 200) {
       setStatusMsg("✅ Message Sent Successfully");
       toast.update(toastId, {
-      render: "✅ Message sent successfully!",
-      type: "success",
-      isLoading: false,
-      autoClose: 3000,
-      closeOnClick: true,
-      draggable: true,
+        render: "✅ Message sent successfully!",
+        type: "success",
+        isLoading: false,
+        autoClose: 3000,
+        closeOnClick: true,
+        draggable: true,
       });
 
-        setFname("");
-        setLname("");
-        setEmail("");
-        setMessage("");
-      }
-    } catch (error) {
-      console.error("Frontend error:", error);
-      toast.update(toastId, {
+      setFname("");
+      setLname("");
+      setEmail("");
+      setMessage("");
+    }
+  } catch (error) {
+    console.error("Frontend error:", error);
+    toast.update(toastId, {
       render: "❌ Failed to send message!",
       type: "error",
       isLoading: false,
@@ -66,23 +58,24 @@ const Aboutme = () => {
       closeOnClick: true,
       draggable: true,
     });
-      if (error.response) {
-      
-        setStatusMsg(error.response.data.error || "❌ Message failed to send");
-        
-      } else if (error.request) {
-       
-        setStatusMsg("⚠️ No response from server. Please try again later.");
-        
-      } else {
-        
-        setStatusMsg("❌ An unexpected error occurred.");
-      }
+
+    if (error.response) {
+      setStatusMsg(error.response.data.error || "❌ Message failed to send");
+    } else if (error.request) {
+      setStatusMsg("⚠️ No response from server. Please try again later.");
+    } else {
+      setStatusMsg("❌ An unexpected error occurred.");
     }
-  };
+  }
+};
+
 
   return (
+
     <div id="contact" className="w-full px-5 py-10">
+      <div>
+      <ToastContainer/>
+    </div>
       {/* Title */}
       <div className="text-4xl md:text-6xl font-['balo'] font-bold text-center">
         <h1>
@@ -171,8 +164,7 @@ const Aboutme = () => {
                 <p className="text-center text-sm md:text-base mt-2">
                   {statusMsg}
                   
-                </p>,
-                <ToastContainer/>
+                </p>
               )}
 
               <div className="flex justify-center">
@@ -189,6 +181,8 @@ const Aboutme = () => {
         </motion.div>
       </div>
     </div>
+  
+    
   );
 };
 
