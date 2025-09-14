@@ -19,7 +19,7 @@ const Aboutme = () => {
 
   // Always trigger loading immediately
   const toastId = toast.loading("Sending message...", {
-    position: "bottom-center",
+    position: "top-right",
     closeOnClick: false,
     pauseOnHover: false,
     draggable: false,
