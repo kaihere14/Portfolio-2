@@ -35,7 +35,7 @@ const Aboutme = () => {
     if (response.status === 200) {
       setStatusMsg("✅ Message Sent Successfully");
       toast.update(toastId, {
-        render: "✅ Message sent successfully!",
+        render: "Message sent successfully!",
         type: "success",
         isLoading: false,
         autoClose: 3000,
@@ -51,7 +51,7 @@ const Aboutme = () => {
   } catch (error) {
     console.error("Frontend error:", error);
     toast.update(toastId, {
-      render: "❌ Failed to send message!",
+      render: " Failed to send message!",
       type: "error",
       isLoading: false,
       autoClose: 3000,
