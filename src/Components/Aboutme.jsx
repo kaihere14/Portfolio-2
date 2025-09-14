@@ -11,42 +11,7 @@ const Aboutme = () => {
   const [message, setMessage] = useState(""); // <-- message input
   const [statusMsg, setStatusMsg] = useState(""); // <-- success/error message
 
-  const load = () =>toast.success('✅ Message send succesfully!', {
-position: "bottom",
-autoClose: 5000,
-hideProgressBar: false,
-closeOnClick: false,
-pauseOnHover: false,
-draggable: true,
-progress: undefined,
-theme: "light",
-});
 
-const fail = ()=>toast.error('❌ Failed to send message!', {
-position: "bottom-center",
-autoClose: 5000,
-hideProgressBar: false,
-closeOnClick: false,
-pauseOnHover: false,
-draggable: true,
-progress: undefined,
-theme: "light",
-});
-
-const loadingBar = () => {
-  toast('sending message...', {
-    position: "bottom-center",
-    autoClose: 2000,
-    closeOnClick: false,
-    pauseOnHover: false,
-    draggable: false,
-    progress: undefined, // will animate
-    hideProgressBar: false, 
-    closeButton: false,
-    className: "bg-transparent shadow-none", // remove bg
-    bodyClassName: "hidden", // hide text
-  });
-};
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -57,7 +22,7 @@ const loadingBar = () => {
       msg: message,
     };
 
-     const toastId = toast.loading("Sending message...", {
+  const toastId = toast.loading("Sending message...", {
     position: "bottom-center",
     closeOnClick: false,
     pauseOnHover: false,
@@ -76,15 +41,15 @@ const loadingBar = () => {
       );
 
       if (response.status === 200) {
-        toast.update(toastId, {
+      setStatusMsg("✅ Message Sent Successfully");
+      toast.update(toastId, {
       render: "✅ Message sent successfully!",
       type: "success",
       isLoading: false,
       autoClose: 3000,
       closeOnClick: true,
       draggable: true,
-    });
-        setStatusMsg("✅ Message Sent Successfully");
+      });
 
         setFname("");
         setLname("");
