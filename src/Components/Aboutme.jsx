@@ -12,7 +12,7 @@ const Aboutme = () => {
   const [statusMsg, setStatusMsg] = useState(""); // <-- success/error message
 
   const load = () =>toast.success('✅ Message send succesfully!', {
-position: "top-right",
+position: "bottom",
 autoClose: 5000,
 hideProgressBar: false,
 closeOnClick: false,
@@ -50,14 +50,13 @@ const loadingBar = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    loadingBar()
     const data = {
       fname,
       lname,
       email,
       msg: message,
     };
-
-    loadingBar()
     try {
       const response = await axios.post(
         "https://portfolio-backend-gray.vercel.app/contact",
