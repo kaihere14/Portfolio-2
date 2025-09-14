@@ -36,7 +36,7 @@ theme: "light",
 const loadingBar = () => {
   toast('sending message...', {
     position: "bottom-center",
-    autoClose: 5000,
+    autoClose: 2000,
     closeOnClick: false,
     pauseOnHover: false,
     draggable: false,
@@ -50,7 +50,6 @@ const loadingBar = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    loadingBar()
     const data = {
       fname,
       lname,
@@ -135,7 +134,11 @@ const loadingBar = () => {
           <div className="second flex justify-center p-6">
             <form
               className="font-['balo'] w-full flex flex-col gap-6"
-              onSubmit={handleSubmit}
+              onSubmit={(e)=>{
+                handleSubmit(e),
+                loadingBar()
+              }}
+              
             >
               <div className="flex flex-col md:flex-row gap-6">
                 <input
