@@ -60,7 +60,7 @@ const Navbar = () => {
           whileHover={{ scale: 1.1 }}
           transition={{ type: "tween", duration: 0.3, ease: "easeOut" }}
           className="animated-underline"
-          href="https://drive.google.com/uc?export=download&id=1UKwxiq0MgVb_EbxwkdFsE_EakfOW6sQN"
+          href="https://drive.google.com/file/d/1OI17Q3zkRM6mGJeplXKC1OUpGvxljb03/view?usp=sharing"
           download
         >
           Resume
@@ -97,7 +97,7 @@ const Navbar = () => {
             ))}
             <a
               className="text-lg font-bold"
-              href="https://drive.google.com/uc?export=download&id=1UKwxiq0MgVb_EbxwkdFsE_EakfOW6sQN"
+              href="https://drive.google.com/file/d/1OI17Q3zkRM6mGJeplXKC1OUpGvxljb03/view?usp=sharing"
               download
               onClick={() => setIsOpen(false)}
             >
