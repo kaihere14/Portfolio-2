@@ -17,10 +17,10 @@ const Cards = () => {
         </div>
         <div className="third w-full">
             <div className="left p-6 space-y-2">
-            {["To Desktop"].map((item,index)=>(<h1 key={index} className='text-3xl font-bold font-["balo"]'>{item}</h1>))}
-            <p className='text-lg font-semibold font-["balo"] line-clamp-3'>A visually accurate and responsive clone of the official ToDesktop landing page. Built using HTML, TailwindCSS, and Vanilla JavaScript, this project replicates the clean UI and animated interactions seen in modern SaaS marketing websites.</p>
+            {["Chatify AI"].map((item,index)=>(<h1 key={index} className='text-3xl font-bold font-["balo"]'>{item}</h1>))}
+            <p className='text-lg font-semibold font-["balo"] line-clamp-3'>A full-stack AI-powered chat application featuring real-time messaging and an advanced "AI Prompt Redefine" system. Built with React, TailwindCSS, Node.js, Express, and MongoDB, it replicates the clean UI and seamless chat interactions of modern messaging platforms while integrating intelligent AI-driven features.</p>
             <motion.button whileHover={{ scale: 1.05, backgroundColor: "#ffa600" }} transition={{ type: "tween", duration: 0.2 }} href='#'  className=' cursor-pointer font-["balo"] font-semibold border-3 bg-[#c4c4c4] flex justify center items-center py-2 px-3 gap-4'>
-                <a href='https://todesktop-ui-eta.vercel.app/'>View Project</a>
+                <a href='https://chatify-ai.vercel.app/'>View Project</a>
                 <TiArrowDownThick className='rotate-[220deg]'/>
             </motion.button>
             </div>
