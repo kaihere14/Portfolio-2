@@ -60,7 +60,7 @@ const Navbar = () => {
           whileHover={{ scale: 1.1 }}
           transition={{ type: "tween", duration: 0.3, ease: "easeOut" }}
           className="animated-underline"
-          href="https://drive.google.com/file/d/1MOThRZFh7w6xly5ilTVbiqwb19u5CfrK/view?usp=sharing"
+          href="https://drive.google.com/file/d/13VVVgGtNzpVSg7sWoYHYd9wTXkwvwhrm/view?usp=sharing"
           download
         >
           Resume
