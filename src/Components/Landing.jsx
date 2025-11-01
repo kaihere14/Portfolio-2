@@ -22,7 +22,7 @@ const Landing = () => {
             Hi, I’m Arman — a passionate web developer crafting clean, modern and responsive websites.
           </p>
           <a 
-            href="https://drive.google.com/file/d/13VVVgGtNzpVSg7sWoYHYd9wTXkwvwhrm/view?usp=sharing" 
+            href="https://drive.google.com/file/d/13VVVgGtNzpVSg7sWoYHYd9wTXkwvwhrm/view?usp=drive_link" 
             download
           >
             <button className="mt-8 flex items-center justify-center gap-2 px-5 py-3 border-3 bg-[#c4c4c4] font-['balo'] font-semibold cursor-pointer transition-all duration-200 ease-in hover:bg-[#ffa600] hover:scale-105 mx-auto lg:mx-0 rounded-lg">
